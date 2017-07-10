@@ -12,10 +12,10 @@ $connection = mysqli_connect($dbhost.":".$dbport, $dbuser, $dbpwd, $dbname) or d
 
 $query = "SELECT * from users" or die("Error in the consult.." . mysqli_error($connection));
 
-echo "Hello All.. Here is the list of users: <br>";
+echo "Hello All.. Here is the list of products: <br>";
 $rs = $connection->query($query);
 while ($row = mysqli_fetch_assoc($rs)) {
-    echo "User Id: ".$row['user_id'] . " User Name: " . $row['username'] . "<br>";
+    echo "ID: ".$row['ID'] . " SYMBOL: " . $row['SYMBOL'] . " COMPANY_NAME: " . $row['COMPANY_NAME'] . "<br>";
 }
 echo "End of the list <br>";
 
